@@ -7,6 +7,7 @@
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @match        https://acdc/apps/CaseManager/*
 // @grant        none
+// @updateURL https://raw.githubusercontent.com/muller-c/tibco-tampermonkey/master/Optimisation.js
 // ==/UserScript==
 
 
