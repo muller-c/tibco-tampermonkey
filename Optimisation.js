@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Optimisation d'acdc
 // @namespace    http://harmonie-mutuelle.fr/
-// @version      0.2
+// @version      0.3
 // @description  Add number of elements
 // @author       You
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @match        https://acdc/apps/CaseManager/*
+// @match        http://cmn37rec9.hm.dm.ad:8080/apps/CaseManager/*
 // @grant        none
 // @updateURL https://raw.githubusercontent.com/muller-c/tibco-tampermonkey/master/Optimisation.js
 // ==/UserScript==
@@ -89,7 +90,7 @@ function filtrerMesDemandes(idDemande, centreGestionFilter, typeDemandeFilter, a
     XMLHttpRequest.prototype.open = function() {
         this.addEventListener("readystatechange", function() {
 
-            if(this.responseURL.includes("https://acdc/bpm/rest/worklist/items/RESOURCE") && this.readyState ===4)
+            if(this.responseURL.includes("/bpm/rest/worklist/items/RESOURCE") && this.readyState ===4)
             {
 
                 // customize button with number
